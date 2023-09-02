@@ -22,8 +22,7 @@
     color: #003D6B;
 }
 .time-display {
-    font-size: 24px;
-    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
     color: #003D6B;
   }
 .homenav-right{
@@ -48,6 +47,25 @@
 .right-dashboard{
     width: 79%;
 }
+.right-dash-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.right-dashboard .right-dash-header h4{
+    font-size: 20px;
+    font-weight: 700;
+    color: #003D6B;
+    margin-left: 20px;
+}
+.right-dashboard p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #003D6B;
+    margin-right: 20px;
+}
 .dashboard-cards{
     width: 100%;
     display: flex;
@@ -58,8 +76,9 @@
     align-items: center;
     margin-top: 20px;
 }
-.dashboard-card{
+.user-profile{
     width: 30%;
+    position: relative;
     flex-basis: calc(30% - 20px); 
     height: 380px;
     display: flex;
@@ -70,9 +89,191 @@
     background-color: #faf1f1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.dashboard-car{
+.user-profile img{
+    position: absolute;
+    top: -10%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.user-profile h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #003D6B;
+    margin-bottom: 10px;
+}
+.user-profile p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #003D6B;
+    margin-bottom: 20px;
+}
+.profile-dets{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile-det{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-det h4{
+    font-size: 16px;
+    font-weight: 700;
+    color: #003D6B;
+    margin-bottom: 10px;
+}
+.profile-det p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #003D6B;
+}
+.recent-diagnostics{
     width: 60%;
     flex-basis: calc(60% - 20px); 
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #faf1f1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.recent-diagnostics h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #003D6B;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+.diagnostics{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.diagnostic{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 20px;
+    border-right: 8px solid #003D6B;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #faf1f1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.diagnostic h4{
+    font-size: 16px;
+    font-weight: 700;
+    color: #003D6B;
+    margin-bottom: 10px;
+}
+.diagnostic button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #003D6B;
+    color: #faf1f1;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.diagnostic button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #003D6B;
+}
+
+
+
+.book-appointment{
+    width: 60%;
+    flex-basis: calc(60% - 20px); 
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #faf1f1;
+}
+.book-appointment h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #003D6B;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+.appointments{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.appointment{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+.appointment p{
+    font-size: 16px;
+    font-weight: 700;
+    color: #003D6B;
+}
+.appointment h4{
+    font-size: 14px;
+    font-weight: 400;
+    color: #003D6B;
+}
+.appointment button{
+    width: 20%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: #003D6B;
+    color: #faf1f1;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.appointment button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #003D6B;
+}
+.appointment img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Number of diagnostics container */
+.number-of-diagnostics {
+    width: 30%;
+    position: relative;
+    flex-basis: calc(30% - 20px);
     height: 380px;
     display: flex;
     flex-direction: column;
@@ -81,4 +282,59 @@
     border-radius: 12px;
     background-color: #faf1f1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    padding: 20px; /* Add padding to the container */
+  }
+  
+  /* Header */
+  .number-of-diagnostics h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #003D6B;
+    margin-bottom: 10px;
+  }
+  
+  /* Date Range Selection */
+  .date-range-selection {
+    margin-bottom: 20px; /* Add space below the date range selection */
+  }
+  
+  .date-range-selection label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #003D6B;
+    margin-right: 10px;
+  }
+  
+  .date-range-selection select {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Number Circle */
+  .number-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003D6B;
+    color: #ffffff;
+    margin-top: auto; /* Push the circle to the bottom of the container */
+  }
+  
+  .number-circle h2 {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  
+  /* Optional: Add hover styles */
+  .number-of-diagnostics:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  
