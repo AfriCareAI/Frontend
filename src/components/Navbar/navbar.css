@@ -1,0 +1,49 @@
+.navbar{
+    width: 100%;
+    height: 80px;
+    padding: 10px 14px;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+.navbar h1{
+    font-size: 24px;
+    font-weight: 700;
+}
+.navbar-links{
+    display: flex;
+    align-items: center;
+}
+.navbar-links .links{
+    list-style: none;
+    text-decoration: none;
+    margin-left: 100px;
+    padding-right: 10px;
+    font-size: 16px;
+    color: #003D6B;
+    border-right: 1px solid #000;
+}
+.navbar-links .links:hover{
+    color: #3573a3;
+    transition: all 0.5s ease;
+}
+button .links{
+    list-style: none;
+    text-decoration: none;
+}
+.nav-buttons{
+    display: flex;
+    align-items: center;
+}
+.nav-buttons button{
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}

@@ -1,0 +1,119 @@
+.login-page{
+    width: 100%;
+    margin: auto;
+    
+}
+.login-page h2{
+    margin: 20px;
+    font-size: 20px;
+}
+.login-page h2 img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+.login-container{
+    width: 60%;
+    margin: 0 auto;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+.login-left{
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 0 5px 0 #443f3f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+.login-left h3{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.login-left p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.login-form{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.login-form input{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+.login-form input:focus{
+    border: 1px solid #003D6B;
+    transition: all 0.5s ease;
+}
+.password-input-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .password-input-wrapper input {
+    padding-right: 30px;
+    width: 100%;
+  }
+  
+  .password-input-wrapper i {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+.login-form button{
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background-color:  #003D6B;
+    color: #F5F5F5;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.login-form button:hover{
+    background-color: #F5F5F5;
+    color: #003D6B;
+    border: 1px solid #003D6B;
+    transition: all 0.5s ease;
+}
+.login-form p{
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+}
+.login-form .login-alts{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.forgot-links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 14px;
+}
+.login-right img{
+    width: 600px;
+    height: 600px;
+}
