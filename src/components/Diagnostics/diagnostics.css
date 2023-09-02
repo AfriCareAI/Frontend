@@ -1,0 +1,62 @@
+.diagnostic-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .diagnostic-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #003D6B;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #003D6B;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #003D6B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .diagnostic-results {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .diagnostic-results p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
