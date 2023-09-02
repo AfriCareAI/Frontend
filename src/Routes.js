@@ -4,6 +4,8 @@ import Login from "./components/Login/Login";
 import Signup from "./components/Signup/Signup";
 import Landing from "./components/Landing/Landing";
 import Homepage from "./components/Homepage/Homepage";
+import Chat from "./components/Chat/Chat";
+import Diagnostics from "./components/Diagnostics/Diagnostics";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
   {
     path: "/africare",
     element: <Homepage />
+  },
+  {
+    path: "/chat",
+    element: <Chat />
+  },
+  {
+    path: "/diagnostics",
+    element: <Diagnostics />
   }
 ]);
 
