@@ -7,8 +7,8 @@ const Chat = () => {
   const [newMessage, setNewMessage] = useState("");
   const [answer, setAnswer] = useState("");
 
-  const base_url = "https://api.openai.com/v1/";
-  const openai_token = "";
+  const base_url = "https://api.openai.com/v1";
+  const openai_token = "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";
 
   const openai_header = {
     "Content-Type": "application/json",

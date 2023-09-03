@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const DiagnosticReportPDF = ({ data }) => {
+const DiagnosticReportPDF = ({ data, report }) => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
@@ -42,6 +42,7 @@ const DiagnosticReportPDF = ({ data }) => {
           <Text style={styles.text}>{data.symptoms}</Text>
           <Text style={styles.subheader}>Lab Results:</Text>
           <Text style={styles.text}>{data.labResults}</Text>
+          <Text style={styles.text}>{report}</Text>
         </View>
       </Page>
     </Document>
