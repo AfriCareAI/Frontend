@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './diagnostics.css';
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import DiagnosticReportPDF from './DiagnosticReportPDF';
+import axios from 'axios';
 
 const Diagnostics = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const Diagnostics = () => {
   });
 
   const [file, setFile] = useState(null);
+  const [chatResponse, setChatResponse] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,7 +27,7 @@ const Diagnostics = () => {
     setFile(selectedFile);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     console.log('Form Data:', formData);

@@ -1,25 +1,64 @@
-import React, { useState, useEffect } from "react";
+import axios from "axios";
+import React, { useState, useEffect, useRef } from "react";
 import "./chat.css"; 
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
+  const [answer, setAnswer] = useState("");
 
-  const sendMessage = () => {
+  const base_url = "https://api.openai.com/v1/";
+  const openai_token = "";
+
+  const openai_header = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${openai_token}`
+  };
+
+  const sendMessage = async () => {
+    
     if (newMessage.trim() !== "") {
       setMessages([...messages, { text: newMessage, sender: "user" }]);
       setNewMessage(""); 
+      const data = {
+        "model": "gpt-3.5-turbo",
+        "messages":[
+          {
+            "role":"user",
+            "content":`I want an answer for healt service assistant: ${newMessage}`
+          }
+        ]
+      };
+      try {
+        const response = await axios.post(`${base_url}/chat/completions`,data, {
+          headers: openai_header
+        });
+        const response_text = response.data.choices[0].message.content;
+        console.log(response_text);
+        // setAnswer(response_text);
+       const botMessage = {text: response_text, sender:"bot"};
+        
+       
+        setTimeout(() => {
+          setMessages([...messages, { text: response_text, sender: "bot" }]);
+        }, 1500);
+      
+        
+      }
+      catch(error) {
+        console.log(error);
+      }
     }
   };
 
-  useEffect(() => {
-    // For demo purposes, simulation to receive a message after a few seconds
-    if (messages[messages.length - 1]?.sender === "user") {
-      setTimeout(() => {
-        setMessages([...messages, { text: "Hi there!", sender: "bot" }]);
-      }, 1500);
-    }
-  }, [messages]);
+  // useEffect(() => {
+  //   // For demo purposes, simulation to receive a message after a few seconds
+  //   if (messages[messages.length - 1]?.sender === "user") {
+  //     setTimeout(() => {
+  //       setMessages([...messages, { text: answ, sender: "bot" }]);
+  //     }, 1500);
+  //   }
+  // }, [messages]);
 
   return (
     <div className="chatpage">
